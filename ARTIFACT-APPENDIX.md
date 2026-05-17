@@ -59,7 +59,7 @@ account creation, installation, or special permissions. No personal data is
 collected by the hosted build.
 
 Reviewers should be able to complete a full playthrough in approximately
-5 minutes per chapter.
+30 minutes.
 
 ## Notes on Reusability
 
