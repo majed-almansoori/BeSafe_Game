@@ -59,8 +59,7 @@ account creation, installation, or special permissions. No personal data is
 collected by the hosted build.
 
 Reviewers should be able to complete a full playthrough in approximately
-[INSERT PLAYTIME — e.g., 15–25 minutes], matching the exposure duration used
-in the study.
+5 minutes per chapter.
 
 ## Notes on Reusability
 
