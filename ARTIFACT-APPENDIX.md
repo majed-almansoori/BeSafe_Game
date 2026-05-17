@@ -1,14 +1,14 @@
 # Artifact Appendix
 
-Paper title: **BeSafe: A Game-Based Educational Intervention for Preventing Intimate Partner Surveillance**
+Paper title: **Cultivating a Tech-Safety Mindset using Game-Based Learning for Defending against Technology-Facilitated Abuse**
 
 Requested Badge(s):
   - [x] **Available**
 
 ## Description
 
-This artifact accompanies the paper *"BeSafe: A Game-Based Educational
-Intervention for Preventing Intimate Partner Surveillance"* by Majed Almansoori
+This artifact accompanies the paper *"Cultivating a Tech-Safety Mindset using Game-Based 
+Learning for Defending against Technology-Facilitated Abuse"* by Majed Almansoori
 et al. (PoPETs 2026). The artifact consists of a publicly accessible, browser-based
 build of **BeSafe**, the game-based learning intervention evaluated in the paper.
 
@@ -51,10 +51,9 @@ rate. No participant data is included in this artifact.
 
 The artifact is publicly available at the following persistent URL:
 
-**[INSERT PERMANENT URL TO HOSTED BESAFE BUILD HERE]**
+**[https://besafe-friendly-waddle.vercel.app/chapters]**
 
-The build is hosted on [INSERT HOSTING PROVIDER — e.g., institutional web
-server / itch.io / GitHub Pages] and is accessible from any modern desktop
+The build is hosted on Vercel and is accessible from any modern desktop
 browser (tested on recent versions of Chrome, Firefox, and Safari) without
 account creation, installation, or special permissions. No personal data is
 collected by the hosted build.
