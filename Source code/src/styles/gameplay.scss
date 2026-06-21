@@ -1,0 +1,70 @@
+.gameplay {
+  .action-btns {
+    .next-btn,
+    .prev-btn {
+      position: absolute;
+      top: 90%;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+
+      background-color: orange;
+    }
+
+    .prev-btn {
+      left: 2rem;
+    }
+
+    .next-btn {
+      right: 2rem;
+    }
+
+    .next-btn.next-chapter,
+    .prev-btn.prev-chapter {
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+
+  .quiz {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20rem;
+
+    padding: 1rem 0.8rem;
+    border-radius: 8px;
+    background-color: orange;
+
+    .question {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .options {
+      margin-top: 0.8rem;
+
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        background-color: darkgoldenrod;
+
+        margin-bottom: 8px;
+        padding: 0.5rem 0.3rem;
+        border-radius: 5px;
+
+        cursor: pointer;
+      }
+    }
+  }
+}

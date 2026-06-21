@@ -1,0 +1,73 @@
+.horizontal-progress-bar {
+  width: 3.2rem;
+  border-radius: 5px;
+  border: 2px solid orange;
+  overflow: hidden;
+  background-color: #ffd099;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  text-align: center;
+
+  &[data-expanded="true"] {
+    width: 50%;
+    right: 25%;
+  }
+
+  transition: all 0.5s ease-in-out;
+}
+
+.progress-button {
+  height: 40px;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+
+  &[data-expanded="true"] {
+    opacity: 0;
+  }
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  background-color: orange;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  opacity: 0;
+
+  &[data-expanded="true"] {
+    opacity: 1;
+  }
+
+  transition: width 0.5s ease-in-out 1s;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-weight: 500;
+  opacity: 0;
+
+  &[data-expanded="true"] {
+    opacity: 1;
+  }
+
+  transition: opacity 0.5s ease-in-out;
+}

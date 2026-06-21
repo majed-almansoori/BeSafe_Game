@@ -1,0 +1,178 @@
+1:
+  type: "changeScene"
+  description: "Alex is in his room. His phone receives notifications."
+  data:
+    scene: "chapters/2/1.png"
+    nextStep: 2
+2:
+  type: "changeScene"
+  description: "He decides to check notification while going for work"
+  data:
+    scene: "chapters/2/2.png"
+    nextStep: 3
+    previousStep: 1
+3:
+  type: "changeScene"
+  description: "He is going for work"
+  data:
+    scene: "chapters/2/3.png"
+    nextStep: 4
+    previousStep: 2
+4:
+  type: "changeScene"
+  description: "He sees that all the notifications disappeared"
+  data:
+    scene: "chapters/2/4.png"
+    nextStep: 5
+    previousStep: 3
+5:
+  type: "changeScene"
+  description: "He is working in his office and gets a phone notification"
+  data:
+    scene: "chapters/2/5.png"
+    nextStep: 6
+    previousStep: 4
+6:
+  type: "changeScene"
+  description: "He decides to check notification later"
+  data:
+    scene: "chapters/2/6.png"
+    nextStep: 7
+    previousStep: 5
+7:
+  type: "changeScene"
+  description: "Robert asks about messages form Alex"
+  data:
+    scene: "chapters/2/7.png"
+    nextStep: 8
+    previousStep: 6
+8:
+  type: "changeScene"
+  description: "Alex thinks he is zoned out"
+  data:
+    scene: "chapters/2/8.png"
+    nextStep: 9
+    previousStep: 7
+9:
+  type: "changeScene"
+  description: "Alex says not to worry as he will change his phone's password"
+  data:
+    scene: "chapters/2/9.png"
+    nextStep: 10
+    previousStep: 8
+10:
+  type: "changeScene"
+  description: "question to player"
+  data:
+    scene: "chapters/2/10.png"
+    nextStep: 11
+    previousStep: 9
+11:
+  type: "showQuiz"
+  data:
+    question: "What is your concern about your friend Robert?"
+    options:
+      - option: "I agree with Robert. Even after changing password your phone might be compromised"
+        nextStep: 12
+      - option: "I agree with Alex. Changing his phone's password should suffice"
+        nextStep: 12
+      - option: "I don't know what is happening"
+        nextStep: 12
+    previousStep: 10
+12:
+  type: "changeScene"
+  description: "Robert says changing password is not enough"
+  data:
+    scene: "chapters/2/11.png"
+    nextStep: 13
+    previousStep: 10
+13:
+  type: "changeScene"
+  description: "Robert insists to examine phone"
+  data:
+    scene: "chapters/2/12.png"
+    nextStep: 14
+    previousStep: 12
+14:
+  type: "changeScene"
+  description: "cafeteria, open settings"
+  data:
+    scene: "chapters/2/13.png"
+    nextStep: 15
+    previousStep: 13
+15:
+  type: "changeScene"
+  description: "Alex is confused with settings"
+  data:
+    scene: "chapters/2/14.png"
+    nextStep: 16
+    previousStep: 14
+16:
+  type: "changeScene"
+  description: "Screenshot of settings"
+  data:
+    scene: "chapters/2/15.png"
+    nextStep: 17
+    previousStep: 15
+17:
+  type: "showQuiz"
+  data:
+    question: "What do you think Alex should choose?"
+    options:
+      - option: "Privacy"
+        nextStep: 18
+      - option: "Account"
+        nextStep: 18
+      - option: "Chats"
+        nextStep: 18
+      - option: "Linked devices"
+        nextStep: 19
+    previousStep: 16
+18:
+  type: "changeScene"
+  description: "Player selects wrong settings"
+  data:
+    scene: "chapters/2/16.png"
+    nextStep: 19
+    previousStep: 16
+19:
+  type: "changeScene"
+  description: "Player answers correctly"
+  data:
+    scene: "chapters/2/17.png"
+    nextStep: 20
+    previousStep: 16
+20:
+  type: "changeScene"
+  description: "Robert tells about macos linked device"
+  data:
+    scene: "chapters/2/18.png"
+    nextStep: 21
+    previousStep: 19
+21:
+  type: "changeScene"
+  description: "Alex doesn't recognize/own the linked device"
+  data:
+    scene: "chapters/2/19.png"
+    nextStep: 22
+    previousStep: 20
+22:
+  type: "changeScene"
+  description: "Robert explains how to logout the linked device"
+  data:
+    scene: "chapters/2/20.png"
+    nextStep: 23
+    previousStep: 21
+23:
+  type: "changeScene"
+  description: "Screenshot of how to logout linked device"
+  data:
+    scene: "chapters/2/21.png"
+    nextStep: 24
+    previousStep: 22
+24:
+  type: "changeScene"
+  description: "Alex can now remove the device. He thanks his friends for the help"
+  data:
+    scene: "chapters/2/22.png"
+    previousStep: 23

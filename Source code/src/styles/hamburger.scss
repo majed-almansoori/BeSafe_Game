@@ -1,0 +1,43 @@
+.hamburger {
+  border-radius: 5px;
+  border: 2px solid orange;
+  overflow: hidden;
+  background-color: #ffd099;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+
+  position: absolute;
+  right: 1.5rem;
+  top: 4.5rem;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 1rem;
+  margin-right: 2rem;
+
+  &[data-open="false"] {
+    display: none;
+  }
+}
+
+.menu-item {
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+}

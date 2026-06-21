@@ -1,0 +1,56 @@
+.chapters {
+  width: min(600px, 90%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgba(#666, 0.5);
+  backdrop-filter: blur(10px);
+
+  border-radius: 10px;
+
+  .title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    color: orange;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    button {
+      outline: none;
+      border: none;
+
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        margin-left: 0.5rem;
+        color: green;
+      }
+    }
+
+    .go-back-btn {
+      background-color: orange;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

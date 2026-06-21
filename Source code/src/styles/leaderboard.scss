@@ -1,0 +1,89 @@
+.leaderboard {
+  width: 30rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-color: rgba(#666, 0.5);
+  backdrop-filter: blur(10px);
+
+  border-radius: 10px;
+
+  .title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    color: orange;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    button {
+      outline: none;
+      border: none;
+
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+    }
+  }
+
+  .heading1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-top: 2rem;
+      color: orange;
+  }
+    
+  .container {
+      background: white;
+      width: 65%;
+      height: 400px; // Fixed height
+      display: flex;
+      border-radius: 5px;
+      flex-direction: row;
+      justify-content: space-between;
+      opacity: 0.6;
+      box-shadow: 10px 10px 80px -8px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 10px 10px 80px -8px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 80px -8px rgba(0, 0, 0, 0.75);
+      position: relative;
+      overflow-y: auto; // Enable vertical scrolling
+  }
+
+  table {
+    width: 100%;
+    align-items: left;
+    border-collapse: collapse;
+    th,
+    td {
+      width: auto;
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid #aaa;
+    }
+
+    th {
+      text-align: left;
+      width: auto;
+    }
+
+    td {
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    // highlight current player
+    tr.current-player {
+      background-color: rgba(255, 255, 0, 0.5); 
+    }
+  }
+}
