@@ -177,20 +177,6 @@ The frontend backend URL is defined in:
 src/constants.ts
 ```
 
-Current value:
-
-```ts
-export const BACKEND_URL =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:8080"
-    : "https://api.gav.chiragghosh.dev";
-```
-
-This means:
-
-- Local development uses `http://localhost:8080`
-- Production uses `https://api.gav.chiragghosh.dev`
-
 Before deploying, replace the production URL with your real deployed backend API URL.
 
 Example:
