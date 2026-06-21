@@ -1,0 +1,39 @@
+services:
+  gav-backend:
+    image: gav-backend
+    build: .
+    ports:
+      - 8080:8080
+    networks:
+      gav-network:
+        aliases:
+          - gav-backend
+    depends_on:
+      gav-database:
+        condition: service_healthy
+
+  gav-database:
+    image: postgres
+    environment:
+      - POSTGRES_USER=${DATABASE_USERNAME}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+      - PGPORT=${DATABASE_PORT}
+      - PGHOST=${DATABASE_HOST}
+    networks:
+      gav-network:
+        aliases:
+          - gav-database
+    volumes:
+      - gav_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+networks:
+  gav-network:
+
+volumes:
+  gav_db:
