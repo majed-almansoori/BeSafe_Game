@@ -199,6 +199,6 @@ Researchers can use BeSafe as:
 
 The educational design and scenario structure described in the paper may also inform future systems aimed at improving user preparedness for online safety and privacy threats. Researchers interested in collaboration or additional information are encouraged to contact the authors.
 
-### Licensing
+## Licensing
 
 The source code included in this artifact is released under the Apache License 2.0. See the LICENSE file in the repository for the complete license terms.
