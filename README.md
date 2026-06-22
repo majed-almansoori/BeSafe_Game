@@ -1,5 +1,7 @@
 # BeSafe Game
 
+Link to the game: https://besafegame.vercel.app/
+
 This project contains:
 
 - **Frontend:** React + TypeScript + Vite
