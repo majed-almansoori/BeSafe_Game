@@ -39,7 +39,7 @@ The hosted deployment asks users to enter a username so the game can track game 
 
 ### Accessibility
 
-The artifact is publicly accessible at:
+The game is publicly accessible at:
 
 https://besafegame.vercel.app/
 
@@ -160,7 +160,7 @@ http://localhost:8080
 
 For deployment, update the backend URL in `src/constants.ts` to point to the deployed backend service.
 
-## Exercising the Artifact
+## Testing the Game
 
 Reviewers can exercise the main game functionality as follows:
 
