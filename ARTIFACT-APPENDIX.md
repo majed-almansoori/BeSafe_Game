@@ -3,76 +3,198 @@
 Paper title: **Cultivating a Tech-Safety Mindset using Game-Based Learning for Defending against Technology-Facilitated Abuse**
 
 Requested Badge(s):
-  - [x] **Available**
+
+* [x] **Available**
+* [x] **Functional**
 
 ## Description
 
-This artifact accompanies the paper *"Cultivating a Tech-Safety Mindset using Game-Based 
-Learning for Defending against Technology-Facilitated Abuse"* by Majed Almansoori
-et al. (PoPETs 2026). The artifact consists of a publicly accessible, browser-based
-build of **BeSafe**, the game-based learning intervention evaluated in the paper.
+This artifact accompanies the paper *"Cultivating a Tech-Safety Mindset using Game-Based Learning for Defending against Technology-Facilitated Abuse"* by Majed Almansoori et al. (PoPETs 2026).
 
-BeSafe is grounded in Protection Motivation Theory (PMT) and is designed to
-shift player behavior toward defending against intimate partner surveillance
-(IPS) — including covert monitoring through shared accounts, location sharing,
-and dual-use applications. Through a sequence of interactive scenarios, the
-player encounters realistic threat situations and selects responses; the game
-provides feedback that links each choice to the threat appraisal and
-coping appraisal constructs from PMT.
+The artifact consists of the source code and a publicly accessible browser-based deployment of **BeSafe**, the game-based learning intervention evaluated in the paper. BeSafe is grounded in Protection Motivation Theory (PMT) and is designed to cultivate a technology-safety mindset for defending against technology-facilitated abuse (TFA). Through a sequence of interactive scenarios, players encounter realistic digital safety and privacy risks and receive feedback intended to strengthen threat awareness and protective decision-making.
 
-The released artifact lets reviewers and other researchers play through the
-full intervention used in the between-subjects study reported in the paper
-(N=198, Prolific). It enables verification that the intervention described in
-the paper exists, is accessible, and matches the experience administered to
-participants. We do **not** release the game's source code, raw data, or
-analysis scripts; the only artifact provided is the playable build itself.
+The artifact allows reviewers and researchers to inspect, run, and exercise the game implementation. It includes the frontend source code, backend source code, deployment configuration, and instructions for running the system. A hosted version is also provided for convenient evaluation.
+
+The user-study dataset and statistical analysis materials are not included in this artifact. Therefore, we request the **Available** and **Functional** badges, but not the **Reproduced** badge.
+
+### Artifact Repository
+
+Source code:
+
+https://github.com/majed-almansoori/BeSafe_Game/tree/main/Source%20code
+
+Live deployment:
+
+https://besafegame.vercel.app/
 
 ### Security/Privacy Issues and Ethical Concerns
 
-The artifact is a self-contained educational game and presents no known
-security or privacy risk to the reviewer's machine. It does not require
-installing software, disabling any security mechanism, or running any
-untrusted code locally beyond what is delivered to the browser by the hosted
-build.
+The artifact is a browser-based educational application and presents no known security or privacy risks to the reviewer's system. It does not require installing browser extensions, disabling security mechanisms, or running privileged code.
 
-The game depicts scenarios involving intimate partner surveillance and
-technology-facilitated abuse. While the content is non-graphic and was
-designed and reviewed with input from researchers experienced in working with
-at-risk populations, reviewers who have personal experience with intimate
-partner violence may find some scenarios uncomfortable. The user study that
-generated the empirical results in the paper was conducted under an approved
-IRB protocol; participants provided informed consent before exposure to the
-intervention and were compensated through Prolific at the prevailing fair
-rate. No participant data is included in this artifact.
+The game contains scenarios related to technology-facilitated abuse and digital safety. Although the content is non-graphic and educational, some reviewers may find certain scenarios emotionally sensitive. The user study reported in the paper was conducted under an approved IRB protocol. No participant data is included in this artifact.
+
+The hosted deployment asks users to enter a username so the game can track game progress and scores. Reviewers may use a pseudonym or arbitrary test username.
 
 ## Environment
 
 ### Accessibility
 
-The artifact is publicly available at the following persistent URL:
+The artifact is publicly accessible at:
 
-**[https://besafe-friendly-waddle.vercel.app/chapters]**
+https://besafegame.vercel.app/
 
-The build is hosted on Vercel and is accessible from any modern desktop
-browser (tested on recent versions of Chrome, Firefox, and Safari) without
-account creation, installation, or special permissions. No personal data is
-collected by the hosted build.
+The source code is publicly available at:
 
-Reviewers should be able to complete a full playthrough in approximately
-30 minutes.
+https://github.com/majed-almansoori/BeSafe_Game/tree/main/Source%20code
+
+The artifact can be accessed using a modern desktop or laptop browser, including recent versions of Chrome, Firefox, Safari, and Edge. No account creation or special permissions are required for the hosted version.
+
+A complete playthrough typically takes approximately 20–30 minutes.
+
+### Hardware Dependencies
+
+No special hardware is required. A standard desktop or laptop computer with internet access is sufficient.
+
+### Software Dependencies
+
+For the hosted version, only a modern web browser is required.
+
+For local execution, reviewers need:
+
+* Node.js and npm
+* Go
+* PostgreSQL-compatible database
+* Git
+
+The backend can be connected to a local PostgreSQL instance or to a hosted PostgreSQL provider such as Supabase.
+
+## Installation and Execution
+
+### Option 1: Use the Hosted Deployment
+
+1. Open:
+
+   https://besafegame.vercel.app/
+
+2. Enter a username when prompted.
+
+3. Play through the available game scenarios.
+
+4. Use the in-game navigation controls to move through the chapters.
+
+5. Optional: open the menu to view the leaderboard, badges, and knowledge meter features.
+
+This is the fastest way to exercise the artifact.
+
+### Option 2: Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/majed-almansoori/BeSafe_Game.git
+cd BeSafe_Game
+```
+
+Install frontend dependencies:
+
+```bash
+npm install
+```
+
+Run the frontend locally:
+
+```bash
+npm run dev
+```
+
+By default, the frontend development server runs at:
+
+```text
+http://localhost:5173
+```
+
+### Backend Setup
+
+The backend is implemented in Go and expects a PostgreSQL database.
+
+Create a `.env` file in the backend directory with the following variables:
+
+```env
+DATABASE_HOST=your_database_host
+DATABASE_PORT=5432
+DATABASE_NAME=postgres
+DATABASE_USERNAME=your_database_username
+DATABASE_PASSWORD=your_database_password
+PORT=8080
+```
+
+Run the backend:
+
+```bash
+cd backend
+go mod download
+go run main.go
+```
+
+The backend creates the required `users` table automatically if it does not already exist.
+
+Confirm the backend is running by opening:
+
+```text
+http://localhost:8080/health
+```
+
+Expected output:
+
+```text
+The game is on
+```
+
+### Frontend Backend URL
+
+For local development, the frontend uses:
+
+```text
+http://localhost:8080
+```
+
+For deployment, update the backend URL in `src/constants.ts` to point to the deployed backend service.
+
+## Exercising the Artifact
+
+Reviewers can exercise the main game functionality as follows:
+
+1. Start the hosted or local version of the game.
+2. Enter a username.
+3. Select or begin a chapter.
+4. Progress through the interactive scenario.
+5. Answer quiz prompts.
+6. Observe knowledge-meter updates after correct responses.
+7. Complete chapters to receive badges.
+8. Open the leaderboard to verify score tracking.
+9. Continue or restart the game to verify local progress behavior.
+
+The expected behavior is that the game loads in the browser, permits chapter navigation, records progress, awards badges after chapter completion, updates the knowledge score, and displays leaderboard entries.
+
+## Badge Justification
+
+### Available
+
+The artifact is publicly available in a GitHub repository and includes source code relevant to the paper. A hosted deployment is also available for direct access.
+
+### Functional
+
+The artifact includes the key software components needed to run and exercise the BeSafe intervention: frontend, backend, database schema initialization, and deployment configuration. The repository provides instructions for running the frontend and backend and for connecting the backend to a PostgreSQL-compatible database.
 
 ## Notes on Reusability
 
-Although only the playable build is released, the artifact is intended to be
-useful to other researchers in two ways. First, researchers studying
-technology-facilitated abuse, usable privacy and security education, or
-PMT-based interventions can use BeSafe directly as a stimulus in their own
-studies — for example, as a benchmark intervention against which to compare
-new educational materials, or as a starting point for replication and
-extension in different populations, languages, or cultural contexts. Second,
-the scenario structure and PMT-grounded feedback design described in the
-paper can be adapted to adjacent threat models (e.g., stalkerware targeting
-non-IPV populations, workplace surveillance, or caregiver-mediated
-monitoring) by authors implementing their own game following the same
-pedagogical pattern. Researchers interested in collaboration or in access
-beyond the publicly hosted build are encouraged to contact the authors.
+The artifact is intended to support reuse by researchers studying technology-facilitated abuse, usable privacy and security, digital safety education, and game-based learning.
+
+Researchers can use BeSafe as:
+
+* A reference implementation of a PMT-based educational intervention.
+* A benchmark intervention for comparative evaluations.
+* An example of applying game-based learning to privacy, security, and safety education.
+* A starting point for replication or adaptation in other populations, languages, cultural contexts, or threat models.
+
+The educational design and scenario structure described in the paper may also inform future systems aimed at improving user preparedness for online safety and privacy threats. Researchers interested in collaboration or additional information are encouraged to contact the authors.
