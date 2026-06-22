@@ -1,19 +1,16 @@
 package main
 
 import (
-"database/sql"
-"encoding/json"
-"fmt"
-"log"
-"net/http"
-"os"
+	"database/sql"
+	"encoding/json"
+	"fmt"
+	"log"
+	"net/http"
+	"os"
 
-```
-"github.com/joho/godotenv"
-"github.com/lib/pq"
-"github.com/rs/cors"
-```
-
+	"github.com/joho/godotenv"
+	"github.com/lib/pq"
+	"github.com/rs/cors"
 )
 
 var db *sql.DB
