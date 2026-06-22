@@ -198,3 +198,7 @@ Researchers can use BeSafe as:
 * A starting point for replication or adaptation in other populations, languages, cultural contexts, or threat models.
 
 The educational design and scenario structure described in the paper may also inform future systems aimed at improving user preparedness for online safety and privacy threats. Researchers interested in collaboration or additional information are encouraged to contact the authors.
+
+### Licensing
+
+The source code included in this artifact is released under the Apache License 2.0. See the LICENSE file in the repository for the complete license terms.
