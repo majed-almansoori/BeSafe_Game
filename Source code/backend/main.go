@@ -83,7 +83,7 @@ fmt.Fprintf(w, "Method not allowed")
 return
 }
 
-```
+
 var reqBody createUserRequest
 err := json.NewDecoder(r.Body).Decode(&reqBody)
 if err != nil {
@@ -137,7 +137,7 @@ if err != nil {
 	fmt.Fprintf(w, "Error sending response")
 	return
 }
-```
+
 
 }
 
@@ -148,7 +148,7 @@ fmt.Fprintf(w, "Method not allowed")
 return
 }
 
-```
+
 users, err := db.Query("SELECT id, username, knowledge_score FROM users ORDER BY knowledge_score DESC")
 if err != nil {
 	w.WriteHeader(http.StatusInternalServerError)
@@ -177,7 +177,7 @@ if err != nil {
 	fmt.Fprintf(w, "Error sending response")
 	return
 }
-```
+
 
 }
 
@@ -188,7 +188,7 @@ fmt.Fprintf(w, "Method not allowed")
 return
 }
 
-```
+
 var reqBody updateKnowledgeScoreRequest
 err := json.NewDecoder(r.Body).Decode(&reqBody)
 if err != nil {
@@ -206,7 +206,7 @@ if err != nil {
 
 w.WriteHeader(http.StatusOK)
 fmt.Fprintf(w, "User knowledge score updated successfully")
-```
+
 
 }
 
@@ -217,7 +217,7 @@ fmt.Fprintf(w, "Method not allowed")
 return
 }
 
-```
+
 var reqBody updateChapterDurationsRequest
 err := json.NewDecoder(r.Body).Decode(&reqBody)
 if err != nil {
@@ -235,7 +235,7 @@ if err != nil {
 
 w.WriteHeader(http.StatusOK)
 fmt.Fprintf(w, "User's chapter durations updated successfully")
-```
+
 
 }
 
@@ -246,7 +246,7 @@ fmt.Fprintf(w, "Method not allowed")
 return
 }
 
-```
+
 var reqBody updateClickCounterRequest
 err := json.NewDecoder(r.Body).Decode(&reqBody)
 if err != nil {
@@ -272,7 +272,7 @@ if err != nil {
 
 w.WriteHeader(http.StatusOK)
 fmt.Fprintf(w, "User feature counter updated successfully")
-```
+
 
 }
 
@@ -283,7 +283,7 @@ fmt.Fprintf(w, "Method not allowed")
 return
 }
 
-```
+
 var reqBody updateBtnClickTimestampsRequest
 err := json.NewDecoder(r.Body).Decode(&reqBody)
 if err != nil {
@@ -309,7 +309,7 @@ if err != nil {
 
 w.WriteHeader(http.StatusOK)
 fmt.Fprintf(w, "User button click timestamps updated successfully")
-```
+
 
 }
 
@@ -320,7 +320,7 @@ fmt.Fprintf(w, "Method not allowed")
 return
 }
 
-```
+
 var reqBody updatePosttestSurveyIDRequest
 err := json.NewDecoder(r.Body).Decode(&reqBody)
 if err != nil {
@@ -338,14 +338,14 @@ if err != nil {
 
 w.WriteHeader(http.StatusOK)
 fmt.Fprintf(w, "User posttest survey ID updated successfully")
-```
+
 
 }
 
 func main() {
 _ = godotenv.Load(".env")
 
-```
+
 DB_USERNAME := os.Getenv("DATABASE_USERNAME")
 DB_PASSWORD := os.Getenv("DATABASE_PASSWORD")
 DB_NAME := os.Getenv("DATABASE_NAME")
@@ -412,6 +412,6 @@ err = http.ListenAndServe(":"+port, c.Handler(http.DefaultServeMux))
 if err != nil {
 	log.Fatal(err)
 }
-```
+
 
 }
