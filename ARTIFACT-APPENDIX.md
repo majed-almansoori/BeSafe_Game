@@ -14,7 +14,7 @@ The artifact consists of the source code and a publicly accessible browser-based
 
 The artifact allows reviewers and researchers to inspect, run, and exercise the game implementation. It includes the frontend source code, backend source code, deployment configuration, and instructions for running the system. A hosted version is also provided for convenient evaluation.
 
-The user-study dataset and statistical analysis materials are not included in this artifact. Therefore, we request the **Available** and **Functional** badges, but not the **Reproduced** badge.
+The user-study dataset and statistical analysis materials are not included in this artifact. Therefore, we request the **Available** badge.
 
 ### Artifact Repository
 
