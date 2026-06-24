@@ -5,7 +5,6 @@ Paper title: **Cultivating a Tech-Safety Mindset using Game-Based Learning for D
 Requested Badge(s):
 
 * [x] **Available**
-* [x] **Functional**
 
 ## Description
 
@@ -181,10 +180,6 @@ The expected behavior is that the game loads in the browser, permits chapter nav
 ### Available
 
 The artifact is publicly available in a GitHub repository and includes source code relevant to the paper. A hosted deployment is also available for direct access.
-
-### Functional
-
-The artifact includes the key software components needed to run and exercise the BeSafe intervention: frontend, backend, database schema initialization, and deployment configuration. The repository provides instructions for running the frontend and backend and for connecting the backend to a PostgreSQL-compatible database.
 
 ## Notes on Reusability
 
